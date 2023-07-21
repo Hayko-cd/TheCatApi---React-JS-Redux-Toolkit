@@ -26,9 +26,6 @@ export const Home = () => {
                 <HomeSideBarCategory>
                     <HomeSideBarCategoryName>Test</HomeSideBarCategoryName>
                 </HomeSideBarCategory>
-                <HomeSideBarCategory>
-                    <HomeSideBarCategoryName>Test</HomeSideBarCategoryName>
-                </HomeSideBarCategory>
             </HomeSideBarBlock>
             <HomeElementWrapper>
                 <HomeElementEveryBlock></HomeElementEveryBlock>
