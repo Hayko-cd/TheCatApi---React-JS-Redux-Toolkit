@@ -29,19 +29,32 @@ export const HomeSideBarBlock = styled.div`
   border-radius: 4px;
 `;
 
+export const HomeSideBarCategoryName = styled.span`
+  ${DEFAULT_FONT};
+  font-size: 18px;
+  color: ${COLORS.green};
+  text-transform: capitalize;
+  cursor: pointer;
+`;
+
 export const HomeSideBarCategory = styled.div`
+  cursor: pointer;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
   height: 30px;
-  background: brown;
-`;
-
-export const HomeSideBarCategoryName = styled.span`
-  ${DEFAULT_FONT};
-  font-size: 22px;
-  color: white;
+  border: 1px solid ${COLORS.green};
+  transition: 0.2s;
+  transition-timing-function: linear;
+  transition-duration: 0.3s;
+  
+  &:hover {
+    background: ${COLORS.green};
+  }
+  &:hover ${HomeSideBarCategoryName} {
+    color: ${COLORS.white};
+  }
 `;
 
 export const HomeElementWrapper = styled.div`
@@ -51,7 +64,7 @@ export const HomeElementWrapper = styled.div`
   justify-content: space-between;
   gap: 10px;
   width: 70%;
-  height: 600px;
+  min-height: 600px;
   border-left: 1px solid ${COLORS.green};
   border-top: 1px solid ${COLORS.green};
   border-bottom: 1px solid ${COLORS.green};

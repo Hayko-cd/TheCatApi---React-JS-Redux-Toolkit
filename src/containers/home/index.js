@@ -1,39 +1,15 @@
+import {HomeSideBar} from "components/home/homeSideBar";
+import {HomeElements} from "components/home/homeElements";
 import {
-    HomeElementEveryBlock,
-    HomeElementWrapper,
-    HomeSideBarBlock,
-    HomeSideBarCategory,
-    HomeSideBarCategoryName,
     HomeWrapper
 } from "containers/home/styled";
 
 export const Home = () => {
+
     return (
         <HomeWrapper>
-            <HomeSideBarBlock>
-                <HomeSideBarCategory>
-                    <HomeSideBarCategoryName>Test</HomeSideBarCategoryName>
-                </HomeSideBarCategory>
-                <HomeSideBarCategory>
-                    <HomeSideBarCategoryName>Test</HomeSideBarCategoryName>
-                </HomeSideBarCategory>
-                <HomeSideBarCategory>
-                    <HomeSideBarCategoryName>Test</HomeSideBarCategoryName>
-                </HomeSideBarCategory>
-                <HomeSideBarCategory>
-                    <HomeSideBarCategoryName>Test</HomeSideBarCategoryName>
-                </HomeSideBarCategory>
-                <HomeSideBarCategory>
-                    <HomeSideBarCategoryName>Test</HomeSideBarCategoryName>
-                </HomeSideBarCategory>
-            </HomeSideBarBlock>
-            <HomeElementWrapper>
-                <HomeElementEveryBlock></HomeElementEveryBlock>
-                <HomeElementEveryBlock></HomeElementEveryBlock>
-                <HomeElementEveryBlock></HomeElementEveryBlock>
-                <HomeElementEveryBlock></HomeElementEveryBlock>
-                <HomeElementEveryBlock></HomeElementEveryBlock>
-            </HomeElementWrapper>
+            <HomeSideBar />
+            <HomeElements />
         </HomeWrapper>
     )
 }
