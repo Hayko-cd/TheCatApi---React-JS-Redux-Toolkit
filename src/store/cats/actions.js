@@ -3,9 +3,9 @@ import { CatService } from "store/cats/service";
 
 export const CatsDataAction = createAsyncThunk(
     "fetch/catsData",
-    async(_, { rejectWithValue }) => {
+    async(data, { rejectWithValue }) => {
         try {
-            const response = await CatService.cats();
+            const response = await CatService.cats(data);
             return response.data;
         } catch (error) {
             return rejectWithValue(error);

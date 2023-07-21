@@ -5,7 +5,6 @@ import {
 } from "containers/home/styled";
 
 export const Home = () => {
-
     return (
         <HomeWrapper>
             <HomeSideBar />

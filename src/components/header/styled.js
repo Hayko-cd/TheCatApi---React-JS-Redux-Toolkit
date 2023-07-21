@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import {COLORS} from "utils/colors";
-import {DEFAULT_FONT} from "../../utils/constants";
+import {DEFAULT_FONT} from "utils/constants";
 
 export const HeaderBlock = styled.div`
   display: flex;
@@ -23,5 +23,13 @@ export const WebsiteName = styled.span`
   color: ${COLORS.white};
   text-transform: capitalize;
   ${DEFAULT_FONT};
+  
+  @media only screen and (max-width: 768px) {
+    font-size: 18px;
+  }
+
+  @media only screen and (max-width: 428px) {
+    font-size: 16px;
+  }
 `;
 

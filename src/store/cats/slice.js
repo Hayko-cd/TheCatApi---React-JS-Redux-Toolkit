@@ -20,6 +20,9 @@ export const CatsData = createSlice({
                     break;
             }
         },
+        resetData: (state) => {
+            state.data = [];
+        },
     },
 
     extraReducers: {
@@ -28,7 +31,7 @@ export const CatsData = createSlice({
             state.CatsDataStatus = REDUX_STATES.PENDING;
         },
         [CatsDataAction.fulfilled]: (state, action) => {
-            state.data = action.payload;
+            state.data = [...state.data, ...action.payload];
             state.CatsDataStatus = REDUX_STATES.SUCCEEDED;
         },
         [CatsDataAction.rejected]: (state, { payload }) => {
@@ -42,6 +45,6 @@ export const CatsData = createSlice({
     },
 });
 
-export const { resetStatus } = CatsData.actions;
+export const { resetStatus, resetData } = CatsData.actions;
 
 export default CatsData.reducer;
