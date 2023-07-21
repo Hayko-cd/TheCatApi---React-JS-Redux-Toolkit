@@ -153,10 +153,19 @@ export const LoadMoreButtonWrapper = styled.div`
 export const LoadMoreButton = styled.button`
   width: 180px;
   height: 40px;
-  background: red;
+  background: ${COLORS.white};
+  color: ${COLORS.green};
   outline: none;
   border: 1px solid ${COLORS.green};
   border-radius: 4px;
-  color: ${COLORS.white};
   cursor: pointer;
+  transition: 0.2s;
+  transition-timing-function: linear;
+  transition-duration: 0.3s;
+  
+  &:hover {
+    border: 1px solid ${COLORS.green};
+    background: ${COLORS.green};
+    color: ${COLORS.white};
+  }
 `;
